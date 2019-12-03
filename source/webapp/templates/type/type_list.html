@@ -1,0 +1,22 @@
+<div class="object">
+        <div class="row my-5">
+
+
+            {% if user.is_authenticated %}
+                <div class="left col-8 d-flex justify-content-center">
+
+                    <h5>{{ object.pk }}.{{ object.name }}</h5>
+                </div>
+                <div class="right col-4 d-flex justify-content-end">
+                    <p class="mr-5"><a href="{% url 'type_update' object.pk %}"><i class="far fa-edit"></i></a></p>
+                    <p class="mr-3"><a href="{% url 'type_delete' object.pk %}"><i class="far fa-trash-alt"></i></a></p>
+                </div>
+            {% else %}
+                <div class="left col-12 d-flex justify-content-center">
+
+                    <h5>{{ object.pk }}.{{ object.name }}</h5>
+                </div>
+            {% endif %}
+
+            </div>
+</div>

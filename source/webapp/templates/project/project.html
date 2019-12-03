@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block menu %}
+    <li><a href="{% url 'webapp:projects' %}">Список проектов</a></li>
+    {% if can_edit %}
+        {% if perms.webapp.change_project %}
+    <li><a href="{% url 'webapp:project_update' project.pk %}">Редактировать этот проект</a></li>
+            {% endif %}
+        {% if perms.webapp.delete_project %}
+    <li><a href="{% url 'webapp:project_delete' project.pk %}">Удалить этот проект</a></li>
+            {% endif %}
+        {% if perms.webapp.change_team %}
+    <li><a href="{% url 'webapp:team_update' project.pk %}">Изменить команду</a></li>
+            {% endif %}
+    {% endif %}
+{% endblock %}
+{% block content %}
+    <div class="row">
+                <div class="left col-10 d-flex justify-content-center">
+                    <h5>{{ project.name }}</h5>
+                </div>
+            </div>
+    <div class="row my-5">
+                <div class="left col-10 d-flex justify-content-center">
+                    <h5>{{ project.description }}</h5>
+                </div>
+            </div>
+        <div class="row">
+         <p class="text col-6">Дата создания: {{ project.created_at|date:'Y-m-d H:i:s' }}</p>
+         <p class="text col-6 align-self-end">Дата изменения: {{ project.updated_at|date:'Y-m-d H:i:s' }}</p>
+        </div>
+    <p>Статус проекта: {{ project.get_status_display }}</p>
+    <h2>Участники этого проекта:</h2>
+    {% for team in teams %}
+        <div class="row my-1">
+        <p class="col-6">Имя:</p>
+        <p class="col-6">{{ team.participant.first_name }}</p>
+        </div>
+        <div class="row">
+        <p class="col-6">Учавствует с:</p>
+        <p class="col-6">{{ team.started_at|date:"Y-m-d" }}</p>
+        </div>
+        {% empty %}
+        <h2>У этого проекта нет ни одного участника...</h2>
+    {% endfor %}
+    {% if can_edit %}
+    <h3 class="mt-5">Добавить задачу к этому проекту</h3>
+    <form action="{% url 'webapp:issue_create' project.pk %}" method="post">
+    {% include 'partial/form.html' with button_text='Добавить' %}
+    </form>
+    {% endif %}
+    <h3>Задачи к этому проекту</h3>
+    {% for issue in issues %}
+        {% include "issue/issue_list.html" %}
+         {% empty %}
+        <h4 class ="my-5 text-center">К этому проекту еще не добавили задач...</h4>
+    {% endfor %}
+
+     {% if is_paginated %}
+        {% include 'partial/paginator.html' %}
+    {% endif %}
+
+{% endblock %}

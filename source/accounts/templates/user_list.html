@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1 class="mb-5">Список всех пользователей</h1>
+{% for user_obj in users %}
+    <div class="object">
+     <h2 class="mb-5">Профиль: <a href="{% url 'accounts:user_detail' user_obj.pk%}">{{ user_obj.username }}</a></h2>
+    <div class="row">
+        <div class="col-6">
+            <p class="d-block">Имя:</p>
+        </div>
+        <div class="col-6">
+            {% if user_obj.first_name %}
+            <p><b>{{ user_obj.first_name }}</b></p>
+            {% else %}
+            <p><b>"Не указано"</b></p>
+            {% endif %}
+        </div>
+
+    </div>
+        <div class="row">
+        <div class="col-6">
+            <p class="d-block">Фамилия:</p>
+        </div>
+        <div class="col-6">
+            {% if user_obj.last_name %}
+            <p><b>{{ user_obj.last_name }}</b></p>
+            {% else %}
+            <p><b>"Не указано"</b></p>
+            {% endif %}
+        </div>
+
+    </div>
+        <div class="row">
+        <div class="col-6">
+            <p class="d-block">Email:</p>
+        </div>
+        <div class="col-6">
+            {% if user_obj.email %}
+            <p><b>{{ user_obj.email }}</b></p>
+            {% else %}
+            <p><b>"Не указано"</b></p>
+            {% endif %}
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <p class="d-block">Ссылка на гитхаб:</p>
+        </div>
+        <div class="col-6">
+            {% if user_obj.profile.link %}
+            <p><a href="{{ user_obj.profile.link }}">{{ user_obj.profile.link }}</a></p>
+            {% else %}
+            <p><b>"Не указано"</b></p>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row ">
+            <p class="col-6">Дата регистрации:</p>
+            <p class="col-6"><b>{{ user_obj.date_joined|date:"Y-m-d H:i:s" }}</b></p>
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}

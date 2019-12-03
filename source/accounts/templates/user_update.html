@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}{{ user_obj.username }}{% endblock %}
+{% block menu %}
+    {% if user_obj == request.user %}
+        <li><a href="{% url 'accounts:user_detail' user_obj.pk %}">Назад</a></li>
+    {% endif %}
+{% endblock %}
+{% block content %}
+    <h1>Обновить профиль: {{ user_obj.username }}</h1>
+    <form action="{% url 'accounts:user_update' user_obj.pk %}" method="post" enctype="multipart/form-data">
+        {% include 'partial/form.html' with button_text="Обновить" %}
+    </form>
+{% endblock %}

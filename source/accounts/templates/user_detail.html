@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}{{ user_obj.username }}{% endblock %}
+{% block menu %}
+    {% if user_obj == request.user %}
+        <li><a href="{% url "accounts:user_update" user_obj.pk %}">Обновить профиль</a></li>
+        <li><a href="{% url 'accounts:user_change_password' user_obj.pk %}">Поменять пароль</a></li>
+    {% endif %}
+{% endblock %}
+{% block content %}
+    <div class="object row px-0">
+    <div class="col-4">
+        {% if user_obj.profile.avatar %}
+        <img class="avatar" src="{{ user_obj.profile.avatar.url }}" width="210" height="210" alt="user picture">
+            {% else %}
+            <img class="avatar" src="{% static 'img/anonim.jpg' %}" width="210" height="210" alt="user picture">
+        {% endif %}
+    </div>
+    <div class="col-8 pr-0 ">
+     <h2 class="mx-auto">Профиль: {{ user_obj.username }}</h2>
+    <div class="row">
+        <div class="col-6 pl-5">
+            <p class="d-block">Имя:</p>
+        </div>
+        <div class="col-6">
+            <p><b>{{ user_obj.first_name }}</b></p>
+        </div>
+
+    </div>
+        <div class="row ">
+        <p class="col-6 pl-5">Фамилия:</p>
+        <p class="col-6"><b>{{ user_obj.last_name }}</b></p>
+    </div>
+        <div class="row ">
+        <p class="col-6 pl-5">Email:</p>
+        <p class="col-6"><b>{{ user_obj.email }}</b></p>
+        </div>
+
+        <div class="row ">
+        <p class="col-6 pl-5">Дата рождения:</p>
+            {% if user_obj.profile.birth_date %}
+        <p class="col-6"><b>{{ user_obj.profile.birth_date|date:"Y-m-d" }}</b></p>
+            {% else %}
+                <p class="col-6"><b>"Не указано"</b></p>
+            {% endif %}
+        </div>
+        <div class="row ">
+        <p class="col-6 pl-5">Ссылка на гитхаб:</p>
+            {% if user_obj.profile.link %}
+        <p class="col-6"><a href="{{ user_obj.profile.link }}"><b>{{ user_obj.profile.link }}</b></a></p>
+            {% else %}
+             <p class="col-6"><b>"Не указано"</b></p>
+            {% endif %}
+        </div>
+        </div>
+    <div class="row col-12">
+        <h2 class="mx-auto col-12">О себе:</h2>
+        {% if user_obj.profile.about_me %}
+        <p class="px-5">{{ user_obj.profile.about_me }}</p>
+        {% else %}
+            <p class="col-12 mx-auto">Пользователь о себе еще ничего не написал...</p>
+        {% endif %}
+    </div>
+    </div>
+{% endblock %}

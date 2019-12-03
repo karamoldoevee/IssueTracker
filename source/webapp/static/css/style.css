@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 60px;
+
+}
+
+.navbar {
+    display: block;
+    background: #6a7dff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-size: 0;
+    box-sizing: border-box;
+    padding: 7px 30px;
+}
+
+.menu {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    color: #fffee8;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 15px;
+}
+
+.menu a:hover {
+    color: #ffc122;
+
+}
+h1, h2, h3 {
+    text-align: center;
+}
+.form-inline{
+    padding:20px 0;
+    justify-content: center;
+}
+.form-inline button{
+    margin-left:20px;
+}
+.confirm .btn{
+    color:white;
+    margin:0 20px;
+    padding:20px 30px;
+}
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin:0 auto;
+}
+
+.mt-5{
+    margin:50px 0 0 0;
+}
+
+.form-block{
+    margin-top:20px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+.form-control{
+    display:flex;
+    flex-direction:row;
+}
+.form-error {
+    color: red;
+    font-size: 14px;
+
+}
+.field-error {
+    border: solid 1px red;
+    box-shadow: red 0 0 3px;
+}
+.btn-default {
+    background: gray;
+}
+
+.btn-default:hover {
+    box-shadow: rgba(128, 128, 128, 0.8) 0 0 5px;
+}
+
+.btn-primary {
+    background: dodgerblue;
+}
+
+.btn-primary:hover {
+    box-shadow: rgba(30, 144, 255, 0.8) 0 0 5px;
+}
+
+.btn-danger {
+    background: red;
+}
+
+.btn-danger:hover {
+    box-shadow: rgba(255, 0, 0, 0.8) 0 0 5px;
+}
+.object{
+    margin:40px 0;
+    border:2px solid #6a7dff;
+    border-radius: 8px;
+    padding:20px;
+}
+.object .row .right p{
+    margin:0 10px;
+}
+.fa-trash-alt{
+    color: red;
+}
+.object .text{
+    margin:20px 0;
+}
+.avatar {
+    display: inline-block;
+    width: 210px;
+    height: auto;
+    margin-right: 20px;
+}
+.object .col-3{
+    margin:0;
+}
