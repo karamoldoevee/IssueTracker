@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
+{% load static %}
 {% block title %}{{ user_obj.username }}{% endblock %}
 {% block menu %}
     {% if user_obj == request.user %}

@@ -1,13 +1,7 @@
 {% extends 'base.html' %}
 {% block menu %}
-    {% if can_edit %}
-        {% if perms.webapp.change_issue %}
     <li><a href="{% url 'webapp:issue_update' issue.pk %}">Редактировать эту задачу</a></li>
-    {% endif %}
-        {% if perms.webapp.delete_issue %}
-            <li><a href="{% url 'webapp:issue_delete' issue.pk %}">Удалить эту задачу</a></li>
-    {% endif %}
-        {% endif %}
+    <li><a href="{% url 'webapp:issue_delete' issue.pk %}">Удалить эту задачу</a></li>
 {% endblock %}
 {% block content %}
     <div class="row">
@@ -25,4 +19,5 @@
             <p class="text col-6">Статус задачи:{{ issue.status }}</p>
         </div>
         <p>Дата создания: {{ issue.created_at|date:'Y-m-d H:i:s' }}</p>
+        <p>Относится к: {{ issue.project }}</p>
 {% endblock %}

@@ -116,4 +116,3 @@ class SearchView(ListView):
 
     def get_filters(self):
         pass
-

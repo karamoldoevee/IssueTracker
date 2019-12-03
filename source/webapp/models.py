@@ -19,9 +19,12 @@ class Issue(models.Model):
     type = models.ForeignKey('webapp.Type', on_delete=models.PROTECT, blank=False, default=DEFAULT_TYPE_ID,
                              verbose_name='Тип', related_name='issues')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
-    project = models.ForeignKey('webapp.Project', on_delete=models.CASCADE, blank=False, null=True, related_name='issues')
-    created_by = models.ForeignKey(User, on_delete=models.PROTECT, null=True, related_name='created_issues')
-    assigned_to = models.ForeignKey(User, on_delete=models.PROTECT, null=True, related_name='assigned_issues')
+    project = models.ForeignKey('webapp.Project', on_delete=models.CASCADE, blank=False, null=True, verbose_name='Проект',
+                                related_name='issues')
+    created_by = models.ForeignKey(User, on_delete=models.PROTECT, null=True, verbose_name='Создатель',
+                                   related_name='created_issues', )
+    assigned_to = models.ForeignKey(User, on_delete=models.PROTECT, null=True, verbose_name='Исполнитель',
+                                    related_name='assigned_issues',)
 
     def __str__(self):
         return self.summary[:20]
@@ -57,9 +60,7 @@ class Team(models.Model):
     participant = models.ForeignKey(User, on_delete=models.PROTECT, verbose_name='Участник', related_name='teams')
     project = models.ForeignKey('webapp.Project', on_delete=models.PROTECT, verbose_name='Проект', related_name='teams')
     started_at = models.DateField(auto_now_add=True, verbose_name='Дата начала работы')
-    finished_at = models.DateField(verbose_name='Дата окончания работы',null=True,blank=True)
+    finished_at = models.DateField(null=True, blank=True,verbose_name='Дата окончания работы',)
 
     def __str__(self):
         return "Участник {}, проекта {}".format(self.participant, self.project)
-
-

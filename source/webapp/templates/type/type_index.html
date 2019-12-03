@@ -2,7 +2,7 @@
 {% load widget_tweaks %}
 {% block menu %}
     {% if user.is_authenticated %}
-    <li><a href="{% url 'type_create' %}">Создать тип</a></li>
+    <li><a href="{% url 'webapp:type_create' %}">Создать тип</a></li>
     {% endif %}
 {% endblock %}
 {% block content %}

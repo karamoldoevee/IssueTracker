@@ -1,0 +1,293 @@
+[
+{
+  "model": "webapp.issue",
+  "pk": 1,
+  "fields": {
+    "summary": "\u041f\u0435\u0440\u0432\u0430\u044f \u0417\u0430\u0434\u0430\u0447\u0430",
+    "description": "\"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\"",
+    "status": 1,
+    "type": 1,
+    "created_at": "2019-12-03T17:18:42.736Z",
+    "project": 1,
+    "created_by": 1,
+    "assigned_to": 2
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 2,
+  "fields": {
+    "summary": "\u0412\u0442\u043e\u0440\u0430\u044f \u0417\u0430\u0434\u0430\u0447\u0430",
+    "description": "\"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\"",
+    "status": 2,
+    "type": 2,
+    "created_at": "2019-12-03T17:19:32.445Z",
+    "project": 1,
+    "created_by": 4,
+    "assigned_to": 3
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 3,
+  "fields": {
+    "summary": "\u0422\u0440\u0435\u0442\u044c\u044f \u0417\u0430\u0434\u0430\u0447\u0430",
+    "description": "\"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\"",
+    "status": 3,
+    "type": 3,
+    "created_at": "2019-12-03T17:20:03.622Z",
+    "project": 2,
+    "created_by": 1,
+    "assigned_to": 4
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 4,
+  "fields": {
+    "summary": "\u0427\u0435\u0442\u0432\u0435\u0440\u0442\u0430\u044f \u0417\u0430\u0434\u0430\u0447\u0430",
+    "description": "\"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\"",
+    "status": 1,
+    "type": 2,
+    "created_at": "2019-12-03T17:20:27.895Z",
+    "project": 2,
+    "created_by": 1,
+    "assigned_to": 5
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 5,
+  "fields": {
+    "summary": "\u041f\u044f\u0442\u0430\u044f \u0417\u0430\u0434\u0430\u0447\u0430",
+    "description": "\"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\"",
+    "status": 2,
+    "type": 2,
+    "created_at": "2019-12-03T17:20:45.852Z",
+    "project": 3,
+    "created_by": 1,
+    "assigned_to": 6
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 6,
+  "fields": {
+    "summary": "\u0428\u0435\u0441\u0442\u0430\u044f \u0417\u0430\u0434\u0430\u0447\u0430",
+    "description": "\"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\"",
+    "status": 3,
+    "type": 3,
+    "created_at": "2019-12-03T17:21:07.041Z",
+    "project": 3,
+    "created_by": 1,
+    "assigned_to": 8
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 7,
+  "fields": {
+    "summary": "\u0421\u0435\u0434\u044c\u043c\u0430\u044f \u0417\u0430\u0434\u0430\u0447\u0430",
+    "description": "\"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\"",
+    "status": 1,
+    "type": 1,
+    "created_at": "2019-12-03T17:31:51.740Z",
+    "project": 1,
+    "created_by": 1,
+    "assigned_to": 9
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 8,
+  "fields": {
+    "summary": "\u0412\u043e\u0441\u044c\u043c\u0430\u044f \u0417\u0430\u0434\u0430\u0447\u0430",
+    "description": "\"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\"",
+    "status": 2,
+    "type": 3,
+    "created_at": "2019-12-03T17:32:16.053Z",
+    "project": 2,
+    "created_by": 1,
+    "assigned_to": 10
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 9,
+  "fields": {
+    "summary": "\u0414\u0435\u0432\u044f\u0442\u0430\u044f \u0417\u0430\u0434\u0430\u0447\u0430",
+    "description": "\"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\"",
+    "status": 3,
+    "type": 3,
+    "created_at": "2019-12-03T17:32:43.532Z",
+    "project": 3,
+    "created_by": 1,
+    "assigned_to": 11
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 1,
+  "fields": {
+    "name": "\u041f\u0435\u0440\u0432\u044b\u0439 \u041f\u0440\u043e\u0435\u043a\u0442",
+    "description": "\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\"",
+    "created_at": "2019-12-03T17:04:18.248Z",
+    "updated_at": "2019-12-03T17:04:18.248Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 2,
+  "fields": {
+    "name": "\u0412\u0442\u043e\u0440\u043e\u0439 \u041f\u0440\u043e\u0435\u043a\u0442",
+    "description": "",
+    "created_at": "2019-12-03T17:04:29.712Z",
+    "updated_at": "2019-12-03T17:04:34.250Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 3,
+  "fields": {
+    "name": "\u0422\u0440\u0435\u0442\u0438\u0439 \u041f\u0440\u043e\u0435\u043a\u0442",
+    "description": "\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\"",
+    "created_at": "2019-12-03T17:04:45.541Z",
+    "updated_at": "2019-12-03T17:19:04.647Z",
+    "status": "closed"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 1,
+  "fields": {
+    "name": "\u041d\u043e\u0432\u0430\u044f \u0437\u0430\u0434\u0430\u0447\u0430"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 2,
+  "fields": {
+    "name": "\u0412 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u0435"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 3,
+  "fields": {
+    "name": "\u0412\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u0430"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 1,
+  "fields": {
+    "name": "\u0417\u0430\u0434\u0430\u0447\u0430"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 2,
+  "fields": {
+    "name": "\u041e\u0448\u0438\u0431\u043a\u0430"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 3,
+  "fields": {
+    "name": "\u0423\u043b\u0443\u0447\u0448\u0435\u043d\u0438\u0435"
+  }
+},
+{
+  "model": "webapp.team",
+  "pk": 1,
+  "fields": {
+    "participant": 2,
+    "project": 1,
+    "started_at": "2019-12-03",
+    "finished_at": null
+  }
+},
+{
+  "model": "webapp.team",
+  "pk": 2,
+  "fields": {
+    "participant": 3,
+    "project": 1,
+    "started_at": "2019-12-03",
+    "finished_at": null
+  }
+},
+{
+  "model": "webapp.team",
+  "pk": 3,
+  "fields": {
+    "participant": 9,
+    "project": 1,
+    "started_at": "2019-12-03",
+    "finished_at": null
+  }
+},
+{
+  "model": "webapp.team",
+  "pk": 4,
+  "fields": {
+    "participant": 4,
+    "project": 2,
+    "started_at": "2019-12-03",
+    "finished_at": null
+  }
+},
+{
+  "model": "webapp.team",
+  "pk": 5,
+  "fields": {
+    "participant": 5,
+    "project": 2,
+    "started_at": "2019-12-03",
+    "finished_at": null
+  }
+},
+{
+  "model": "webapp.team",
+  "pk": 6,
+  "fields": {
+    "participant": 10,
+    "project": 2,
+    "started_at": "2019-12-03",
+    "finished_at": null
+  }
+},
+{
+  "model": "webapp.team",
+  "pk": 7,
+  "fields": {
+    "participant": 6,
+    "project": 3,
+    "started_at": "2019-12-03",
+    "finished_at": "2019-12-03"
+  }
+},
+{
+  "model": "webapp.team",
+  "pk": 8,
+  "fields": {
+    "participant": 8,
+    "project": 3,
+    "started_at": "2019-12-03",
+    "finished_at": "2019-12-03"
+  }
+},
+{
+  "model": "webapp.team",
+  "pk": 9,
+  "fields": {
+    "participant": 11,
+    "project": 3,
+    "started_at": "2019-12-03",
+    "finished_at": "2019-12-03"
+  }
+}
+]

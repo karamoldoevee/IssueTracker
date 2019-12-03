@@ -1,17 +1,9 @@
 {% extends 'base.html' %}
 {% block menu %}
     <li><a href="{% url 'webapp:projects' %}">Список проектов</a></li>
-    {% if can_edit %}
-        {% if perms.webapp.change_project %}
     <li><a href="{% url 'webapp:project_update' project.pk %}">Редактировать этот проект</a></li>
-            {% endif %}
-        {% if perms.webapp.delete_project %}
     <li><a href="{% url 'webapp:project_delete' project.pk %}">Удалить этот проект</a></li>
-            {% endif %}
-        {% if perms.webapp.change_team %}
     <li><a href="{% url 'webapp:team_update' project.pk %}">Изменить команду</a></li>
-            {% endif %}
-    {% endif %}
 {% endblock %}
 {% block content %}
     <div class="row">
@@ -42,12 +34,10 @@
         {% empty %}
         <h2>У этого проекта нет ни одного участника...</h2>
     {% endfor %}
-    {% if can_edit %}
     <h3 class="mt-5">Добавить задачу к этому проекту</h3>
     <form action="{% url 'webapp:issue_create' project.pk %}" method="post">
     {% include 'partial/form.html' with button_text='Добавить' %}
     </form>
-    {% endif %}
     <h3>Задачи к этому проекту</h3>
     {% for issue in issues %}
         {% include "issue/issue_list.html" %}

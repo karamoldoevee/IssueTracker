@@ -3,7 +3,7 @@
     <h1 class="mb-5">Список всех пользователей</h1>
 {% for user_obj in users %}
     <div class="object">
-     <h2 class="mb-5">Профиль: <a href="{% url 'accounts:user_detail' user_obj.pk%}">{{ user_obj.username }}</a></h2>
+     <h2 class="mb-5">Профиль: <a href="{% url 'accounts:detail' user_obj.pk%}">{{ user_obj.username }}</a></h2>
     <div class="row">
         <div class="col-6">
             <p class="d-block">Имя:</p>

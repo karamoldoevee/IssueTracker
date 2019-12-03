@@ -1,7 +1,5 @@
 from django import forms
 from django.contrib.auth.models import User
-from django.core.exceptions import ValidationError, ObjectDoesNotExist
-from django.forms import widgets
 from webapp.models import Issue, Status, Type, Project, Team
 from datetime import datetime
 
