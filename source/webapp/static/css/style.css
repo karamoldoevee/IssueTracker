@@ -1,19 +1,17 @@
 body {
     font-family: Arial, sans-serif;
-    margin-top: 60px;
+    margin-top: 80px;
 
 }
 
 .navbar {
-    display: block;
-    background: #6a7dff;
-    position: fixed;
+    background: darkblue;
+    position: absolute;
     top: 0;
     right: 0;
     left: 0;
     font-size: 0;
-    box-sizing: border-box;
-    padding: 7px 30px;
+    padding: 20px 30px;
 }
 
 .menu {
@@ -22,7 +20,6 @@ body {
     line-height: 1;
     padding: 0;
     margin: 0;
-    display: inline-block;
     color: #fffee8;
 }
 
@@ -33,15 +30,11 @@ body {
 .menu a {
     display: inline-block;
     text-decoration: none;
-    color: inherit;
+    color: white;
     padding: 5px 15px;
 }
 
-.menu a:hover {
-    color: #ffc122;
-
-}
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
     text-align: center;
 }
 .form-inline{
@@ -85,50 +78,27 @@ h1, h2, h3 {
     border: solid 1px red;
     box-shadow: red 0 0 3px;
 }
-.btn-default {
-    background: gray;
-}
 
-.btn-default:hover {
-    box-shadow: rgba(128, 128, 128, 0.8) 0 0 5px;
-}
-
-.btn-primary {
-    background: dodgerblue;
-}
-
-.btn-primary:hover {
-    box-shadow: rgba(30, 144, 255, 0.8) 0 0 5px;
-}
-
-.btn-danger {
-    background: red;
-}
-
-.btn-danger:hover {
-    box-shadow: rgba(255, 0, 0, 0.8) 0 0 5px;
-}
 .object{
     margin:40px 0;
-    border:2px solid #6a7dff;
-    border-radius: 8px;
+    border:3px solid darkblue;
+    border-radius: 6px;
     padding:20px;
 }
-.object .row .right p{
-    margin:0 10px;
+
+.create{
+    color: green;
 }
-.fa-trash-alt{
+
+.update{
+    margin-right: 10px;
+    color: darkturquoise;
+}
+
+.delete{
     color: red;
 }
-.object .text{
-    margin:20px 0;
-}
-.avatar {
-    display: inline-block;
-    width: 210px;
-    height: auto;
-    margin-right: 20px;
-}
-.object .col-3{
-    margin:0;
+
+a{
+    color: black;
 }

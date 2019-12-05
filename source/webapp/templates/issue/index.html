@@ -1,22 +1,14 @@
 {% extends 'base.html' %}
 {% load widget_tweaks %}
 {% block menu %}
-    <li class="ml-3"><div class="btn-group">
-  <button type="button" class="btn btn-primary">Списки</button>
-  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="{% url 'webapp:projects' %}">Список проектов</a>
-    <a class="dropdown-item" href="{% url 'webapp:statuses' %}">Список статусов</a>
-    <a class="dropdown-item" href="{% url 'webapp:types' %}">Список типов</a>
-      <a class="dropdown-item" href="{% url 'accounts:users' %}">Список пользователей</a>
-  </div>
-</div></li>
+    <a href="{% url 'webapp:projects' %}">Проекты</a>
+    <a href="{% url 'webapp:statuses' %}">Статусы</a>
+    <a href="{% url 'webapp:types' %}">Типы</a>
+    <a href="{% url 'accounts:users' %}">Пользователи</a>
 {% endblock %}
 {% block content %}
     {% include 'partial/search_form.html' %}
-    <h1>Трекер задач</h1>
+    <h1>Задачи</h1>
     {% for issue in issues %}
         {% include 'issue/issue_list.html' %}
     {% endfor %}

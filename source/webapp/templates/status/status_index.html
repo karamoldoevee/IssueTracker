@@ -2,11 +2,11 @@
 {% load widget_tweaks %}
 {% block menu %}
     {% if user.is_authenticated %}
-    <li><a href="{% url 'webapp:status_create' %}">Создать статус</a></li>
+    <li><a href="{% url 'webapp:status_create' %}">Создать</a></li>
     {% endif %}
 {% endblock %}
 {% block content %}
-    <h1>Список статусов</h1>
+    <h1>Статусы</h1>
     {% for object in object_list %}
         {% include 'status/status_list.html' %}
     {% endfor %}

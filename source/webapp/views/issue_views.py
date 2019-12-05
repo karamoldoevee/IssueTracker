@@ -49,7 +49,7 @@ class IssueView(DetailView):
         return context
 
 
-class IssueCreateView(UserPassesTestMixin,PermissionRequiredMixin, CreateView):
+class IssueCreateView(UserPassesTestMixin, PermissionRequiredMixin, CreateView):
     form_class = IssueForm
     model = Issue
     template_name = 'create.html'
@@ -63,7 +63,8 @@ class IssueCreateView(UserPassesTestMixin,PermissionRequiredMixin, CreateView):
     def get_form(self, form_class=None):
         form = super().get_form()
         project = self.get_project()
-        form.fields['assigned_to'].queryset = get_participants_of_project(project=project).exclude(id=self.request.user.id)
+        form.fields['assigned_to'].queryset = get_participants_of_project(project=project).exclude(
+            id=self.request.user.id)
         return form
 
     def form_valid(self, form):
@@ -94,7 +95,8 @@ class IssueUpdateView(UserPassesTestMixin, PermissionRequiredMixin, UpdateView):
 
     def get_form(self, form_class=None):
         form = super().get_form()
-        form.fields['assigned_to'].queryset = get_participants_of_project(project=self.object.project).exclude(id=self.request.user.id)
+        form.fields['assigned_to'].queryset = get_participants_of_project(project=self.object.project).exclude(
+            id=self.request.user.id)
         return form
 
     def get_success_url(self):

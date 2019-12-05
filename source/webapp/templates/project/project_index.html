@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 {% load widget_tweaks %}
 {% block menu %}
-    <li><a href="{% url 'webapp:project_create' %}">Создать проект</a></li>
+    <li><a href="{% url 'webapp:project_create' %}">Создать</a></li>
 {% endblock %}
 {% block content %}
-    <h1>Трекер проектов</h1>
+    <h1>Проекты</h1>
     {% include 'partial/search_form.html' %}
-    <div class="row">
-        <div class="col-6 w-100">
-            <h3>Открытые проекты</h3>
+    <div>
+        <div>
             {% for project in active_projects %}
+            <h3>Статус: Активный</h3>
                 {% include 'project/project_list.html' %}
             {% endfor %}
         </div>
-        <div class="col-6">
-            <h3>Закрытые проекты</h3>
+        <div>
         {% for project in closed_projects %}
+            <h3>Статус: Завершенный</h3>
             {% include 'project/project_list.html' %}
         {% endfor %}
         </div>

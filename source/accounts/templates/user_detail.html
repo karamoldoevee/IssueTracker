@@ -13,7 +13,7 @@
         {% if user_obj.profile.avatar %}
         <img class="avatar" src="{{ user_obj.profile.avatar.url }}" width="210" height="210" alt="user picture">
             {% else %}
-            <img class="avatar" src="{% static 'img/anonim.jpg' %}" width="210" height="210" alt="user picture">
+            <img class="avatar" src="{% static 'img/adam.jpg' %}" width="210" height="210" alt="user picture">
         {% endif %}
     </div>
     <div class="col-8 pr-0 ">
@@ -58,7 +58,7 @@
         {% if user_obj.profile.about_me %}
         <p class="px-5">{{ user_obj.profile.about_me }}</p>
         {% else %}
-            <p class="col-12 mx-auto">Пользователь о себе еще ничего не написал...</p>
+            <p class="col-12 mx-auto">Тут пусто(</p>
         {% endif %}
     </div>
     </div>

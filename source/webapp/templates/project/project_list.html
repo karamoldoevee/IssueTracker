@@ -1,35 +1,35 @@
 <div class="object">
-            <div class="row">
+            <div>
                 {% if project.status == 'active' %}
                     {% if project in editable_projects%}
-                        <div class="left col-9 d-flex justify-content-center">
+                        <div>
                     <h5><a href="{% url 'webapp:project_view' project.pk %}">{{ project.name }}</a></h5>
                 </div>
-                <div class="right col-3 d-flex justify-content-end">
+                <div>
                 {% if perms.webapp.add_issue %}
-                    <p><a href="{% url 'webapp:issue_create' project.pk %}"><i class="fas fa-plus"></i></a></p>
+                    <p><a href="{% url 'webapp:issue_create' project.pk %}" class="create">Создать Задачу</a></p>
                     {% endif %}
                 {% if perms.webapp.change_project %}
-                    <p><a href="{% url 'webapp:project_update' project.pk %}"><i class="far fa-edit"></i></a></p>
+                    <p><a href="{% url 'webapp:project_update' project.pk %}" class="update">Редактировать Проект</a></p>
                     {% endif %}
                 {% if perms.webapp.delete_project %}
-                    <p><a href="{% url 'webapp:project_delete' project.pk %}"><i class="far fa-trash-alt"></i></a></p>
+                    <p><a href="{% url 'webapp:project_delete' project.pk %}" class="delete">Удалить Проект</a></p>
                     {% endif %}
                         </div>
                         {% else %}
-                         <div class="left col-12 d-flex justify-content-center">
+                         <div>
                     <h5><a href="{% url 'webapp:project_view' project.pk %}">{{ project.name }}</a></h5>
                 </div>
                 {% endif %}
                     {% else %}
-                    <div class="left col-12 d-flex justify-content-center">
+                    <div>
                     <h5>{{ project.name }}</h5>
                     </div>
 
                 {% endif %}
             </div>
-        <div class="row d-flex  mt-5">
-        <p class="text col-6">Дата создания: {{ project.created_at|date:'Y-m-d H:i:s' }}</p>
-            <p class="text col-6 align-self-end">Дата изменения: {{ project.updated_at|date:'Y-m-d H:i:s' }}</p>
+        <div>
+        <p>Дата создания: {{ project.created_at|date:'Y-m-d H:i:s' }}</p>
+            <p>Дата изменения: {{ project.updated_at|date:'Y-m-d H:i:s' }}</p>
         </div>
         </div>

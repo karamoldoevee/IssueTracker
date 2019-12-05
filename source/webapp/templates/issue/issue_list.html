@@ -8,8 +8,8 @@
                      <h5><a href="{% url 'webapp:issue_view' issue.pk %}">{{ issue.summary }}</a></h5>
                     </div>
                 <div class="right col-2 d-flex justify-content-end">
-                    <p><a href="{% url 'webapp:issue_update' issue.pk %}"><i class="far fa-edit"></i></a></p>
-                    <p><a href="{% url 'webapp:issue_delete' issue.pk %}"><i class="far fa-trash-alt"></i></a></p>
+                    <p><a href="{% url 'webapp:issue_update' issue.pk %}" class="update">Редактировать</a></p>
+                    <p><a href="{% url 'webapp:issue_delete' issue.pk %}" class="delete">Удалить</a></p>
                 </div>
                     {% else %}
                     <div class="left col-12 d-flex justify-content-center">
@@ -18,9 +18,9 @@
                 {% endif %}
             </div>
         <div class="row d-flex  mt-5">
-        <p class="text col-6">Тип задачи: {{ issue.type }}</p>
-            <p class="text col-6 align-self-end">Статус задачи: {{ issue.status }}</p>
+        <p class="text col-6">Тип: {{ issue.type }}</p>
+            <p class="text col-6 align-self-end">Статус: {{ issue.status }}</p>
         </div>
         <p class="text col-12 align-self-center">Дата создания: {{ issue.created_at|date:'Y-m-d H:i:s' }}</p>
-        <p class="text col-12 align-self-center">Относится к проекту: {{ issue.project }}</p>
+        <p class="text col-12 align-self-center">Проект: {{ issue.project }}</p>
         </div>
