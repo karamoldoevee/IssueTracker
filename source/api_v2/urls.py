@@ -8,6 +8,8 @@ router = routers.DefaultRouter()
 
 router.register(r'issues', views.IssueViewSet)
 
+router.register(r'orders', views.ProjectViewSet)
+
 app_name = 'api_v2'
 
 urlpatterns = [
