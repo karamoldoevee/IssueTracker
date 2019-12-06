@@ -6,15 +6,31 @@ from webapp.models import Issue, Project
 
 from api_v2.serializers import IssueSerializer, ProjectSerializer
 
+from rest_framework.permissions import AllowAny, DjangoModelPermissions
+
+SAFE_METHODS = ('GET', 'HEAD', 'OPTIONS')
+
 
 class IssueViewSet(viewsets.ModelViewSet):
     queryset = Issue.objects.all()
     serializer_class = IssueSerializer
 
+    def get_permissions(self):
+        if self.request.method in SAFE_METHODS:
+            return [AllowAny()]
+        else:
+            return [DjangoModelPermissions()]
+
 
 class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
+
+    def get_permissions(self):
+        if self.request.method in SAFE_METHODS:
+            return [AllowAny()]
+        else:
+            return [DjangoModelPermissions()]
 
 
 class LogoutView(APIView):
@@ -22,6 +38,8 @@ class LogoutView(APIView):
 
     def post(self, request, *args, **kwargs):
         user = request.user
+
         if user.is_authenticated:
             user.auth_token.delete()
+
         return Response({'status': 'ok'})
