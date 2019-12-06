@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'webapp',
     'accounts',
     'rest_framework',
+    'rest_framework.authtoken',
     'api_v2'
 ]
 
@@ -129,3 +130,13 @@ HOST_NAME = 'localhost:8000'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/media/'
+
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+
+        'rest_framework.authentication.TokenAuthentication',
+
+    )
+
+}
