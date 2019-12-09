@@ -6,7 +6,7 @@ from webapp.models import Issue, Project
 
 from api_v2.serializers import IssueSerializer, ProjectSerializer
 
-from rest_framework.permissions import AllowAny, DjangoModelPermissions
+from rest_framework.permissions import AllowAny, DjangoModelPermissions, IsAuthenticated
 
 SAFE_METHODS = ('GET', 'HEAD', 'OPTIONS')
 
@@ -19,7 +19,7 @@ class IssueViewSet(viewsets.ModelViewSet):
         if self.request.method in SAFE_METHODS:
             return [AllowAny()]
         else:
-            return [DjangoModelPermissions()]
+            return [IsAuthenticated(), DjangoModelPermissions()]
 
 
 class ProjectViewSet(viewsets.ModelViewSet):
@@ -30,7 +30,7 @@ class ProjectViewSet(viewsets.ModelViewSet):
         if self.request.method in SAFE_METHODS:
             return [AllowAny()]
         else:
-            return [DjangoModelPermissions()]
+            return [IsAuthenticated(), DjangoModelPermissions()]
 
 
 class LogoutView(APIView):
